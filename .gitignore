@@ -3,3 +3,6 @@ __pycache__/
 node_modules/
 *.db
 .venv/
+sample_*.json
+multimodo.json
+multideck_*.json

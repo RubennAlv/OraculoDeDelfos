@@ -42,6 +42,24 @@ CREATE TABLE IF NOT EXISTS matchups (
     PRIMARY KEY (archetype_a, archetype_b),
     CHECK (archetype_a <> archetype_b)
 );
+
+CREATE TABLE IF NOT EXISTS games (
+    game_key    TEXT PRIMARY KEY,
+    battle_time TEXT NOT NULL,
+    mode        TEXT NOT NULL,
+    deck_a      TEXT NOT NULL,
+    deck_b      TEXT NOT NULL,
+    a_won       INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS players (
+    tag        TEXT PRIMARY KEY,
+    fetched_at TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS pending_players (
+    tag TEXT PRIMARY KEY
+);
 """
 
 
